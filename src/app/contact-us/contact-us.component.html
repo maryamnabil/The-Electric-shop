@@ -1,0 +1,46 @@
+<app-navbar></app-navbar>
+<section id="About" style="margin-bottom: 5%;">
+  <h1 style="font-family: Ikaros;">Contact Us</h1>
+  <h1 style="margin-top: 0%;">____</h1>
+</section>
+
+<div class="container">
+  <form id="contact" (ngSubmit)="popUp(f)" #f="ngForm">
+      <!-- Name -->
+      <div class="form-group">
+        <label for="Name">Name</label>
+        <div>
+          <input type="text" class="form-control" id="inputName" placeholder="Name" name="Name" required ngModel #name="ngModel">
+        </div>
+       </div>
+           <!-- Name Validation-->
+      <div class="alert alert-danger text-center" *ngIf="!name.valid && name.touched">
+        <div *ngIf="name.errors.required">Name Can not be Empty</div> 
+       </div>
+      <!-- Email -->
+      <div class="form-group">
+        <label for="Email">Email</label>
+        <div>
+          <input type="text" class="form-control" id="inputName" placeholder="Email" name="Email" required ngModel pattern="^[a-z]+[a-z0-9._]+@[a-z]+\.[a-z.]{2,5}$" #email="ngModel">
+        </div>
+       </div>
+       <!--Email Validation-->
+       <div class="alert alert-danger text-center" *ngIf="!email.valid && email.touched">
+        <div *ngIf="email.errors.required">Email Can not be Empty</div> 
+        <div *ngIf="email.errors.pattern">Email is invalid </div>
+      </div>
+      <div class="form-group">
+      <label class="grey-text">Your Message</label>
+      <div>
+      <textarea  type="text" class="form-control" required ngModel #message="ngModel"></textarea>
+      </div>
+      </div> 
+      <br>
+  <button type="submit"  [disabled]="!f.valid" class="btn btn-success">Send To Us</button>
+  </form>
+  </div>
+  
+  <br>
+  <br>
+
+  <app-footer></app-footer>

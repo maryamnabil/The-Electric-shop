@@ -1,0 +1,135 @@
+<app-navbar></app-navbar>
+
+<section id="Add" style="margin-bottom: 5%;">
+  <h1 style="font-family: Ikaros;">Add Your New Device To shop</h1>
+  <h1 style="margin-top: 0%;">____</h1>
+</section>
+
+<div class="container">
+  
+<form>
+    <!-- Default input email -->
+    <label class="grey-text">Used email for Contacting</label>
+    <input type="email" class="form-control">
+
+    <br>
+
+    <!-- Default input subject -->
+    <label class="grey-text">Used Mobile Number for Contacting</label>
+    <input type="text" class="form-control">
+
+    <br>
+
+    <!-- Default input name -->
+    <label class="grey-text">Type Of Your Device</label>
+    <select id="list" class="form-control" name="Choose a device" (change)="color();" >
+      <option value="Television">Television</option>
+      <option value="Mobile">Mobile</option>
+      <option value="Iron">Iron</option>
+      <option value="Heater">Heater</option>
+      <option value="Boiler">Boiler</option>
+      <option value="Microwave">Microwave</option>
+    </select>
+    <br>
+    <div id="Television" style="display:none;">
+
+    <label class="grey-text">screen size(in inches)</label>
+    <input type="number" class="form-control">
+    <br>
+    <label class="grey-text">resolution (in Pixels)</label>
+    <input type="number" class="form-control">
+    <br>
+    <label class="grey-text">TV sound (in watt)</label>
+    <input type="number" class="form-control">
+    <br>
+    <label class="grey-text">Motion Rate</label>
+    <input type="number" class="form-control">
+    <br>
+    <label class="grey-text">Price (in Dollars)</label>
+    <input type="number" class="form-control">
+    <br>
+    <label class="grey-text">Main Description</label>
+    <input type="text" class="form-control">
+    <br>
+</div>
+
+<div id="Mobile" style="display:none;">
+    <label class="grey-text">screen size(in inches)</label>
+    <input type="number" class="form-control">
+    <br>
+    <label class="grey-text">resolution (in Pixels)</label>
+    <input type="number" class="form-control">
+    <br>
+    <label class="grey-text">Ram (in GB)</label>
+    <input type="number" class="form-control">
+    <br>
+    <label class="grey-text">Internal Memory(in GB)</label>
+    <input type="number" class="form-control">
+    <br>
+    <label class="grey-text">Price (in Dollars)</label>
+    <input type="number" class="form-control">
+    <br>
+    <label class="grey-text">Main Description</label>
+    <input type="text" class="form-control">
+    <br>
+
+</div>
+
+<div id="Iron" style="display:none;">
+    <label class="grey-text">size(in inches)</label>
+    <input type="number" class="form-control">
+    <br>
+    <label class="grey-text">Power (in watt)</label>
+    <input type="number" class="form-control">
+    <br>
+    <label class="grey-text">Main Description</label>
+    <input type="text" class="form-control">
+    <br>
+
+</div>
+
+<div id="Heater" style="display:none;">
+    <label class="grey-text">size(in inches)</label>
+    <input type="number" class="form-control">
+    <br>
+    <label class="grey-text">Power (in watt)</label>
+    <input type="number" class="form-control">
+    <br>
+    <label class="grey-text">Main Description</label>
+    <input type="text" class="form-control">
+    <br>
+</div>
+
+<div id="Boiler" style="display:none;">
+    <label class="grey-text">size(in inches)</label>
+    <input type="number" class="form-control">
+    <br>
+    <label class="grey-text">Power (in watt)</label>
+    <input type="number" class="form-control">
+    <br>
+    <label class="grey-text">Main Description</label>
+    <input type="text" class="form-control">
+    <br>
+</div>
+
+<div id="Microwave" style="display:none;">
+    <label class="grey-text">size(in inches)</label>
+    <input type="number" class="form-control">
+    <br>
+    <label class="grey-text">Power (in watt)</label>
+    <input type="number" class="form-control">
+    <br>
+    <label class="grey-text">Main Description</label>
+    <input type="text" class="form-control">
+    <br>
+</div>
+
+
+
+<button *ngIf="option" type="button" class="btn btn-success">Add Product To the Shop</button>
+</form>
+</div>
+<br>
+<br>
+<br>
+<app-footer></app-footer>

@@ -1,0 +1,32 @@
+
+<app-navbar></app-navbar>
+<app-header></app-header>
+
+<section id="Explore" style="margin-bottom: 5%;">
+  <h1 style="font-family: Ikaros;">Explore The World Of Electric devices</h1>
+  <h1 style="margin-top: 0%;">____</h1>
+</section>
+
+
+<div class="container">
+    <form>
+         Search : <input type="text"  [(ngModel)]="searchBox" name="searchBox">
+      </form>
+      <br>
+      <br>
+<div class="row">
+  <div class="col-lg-4" *ngFor="let item of items | filter : searchBox">
+    <div class="thumbnail">
+      <img src="../../assets/{{item.pic}}.jpg" alt="...">
+      <div class="caption">
+        <h3>{{item.title}}</h3>
+        <p>{{item.desciption}}</p>
+        <button type="button" class="btn btn-default">Explore now</button>
+              
+      </div>
+    </div>
+  </div>
+
+</div>
+</div>
+<app-footer></app-footer>
